@@ -495,7 +495,7 @@ function updateLanguageButton() {
             'de': 'DE',
             'es': 'ES'
         };
-        currentLangElement.textContent = langMap[currentLanguage] || 'RU';
+        currentLangElement.textContent = langMap[currentLanguage] || 'DE';
     }
     
     // Update active language button in modal
