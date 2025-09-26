@@ -582,16 +582,8 @@ function preloadCriticalImages() {
     });
 }
 
-// Initialize preloading
+// Initialize preloading and final setup
 document.addEventListener('DOMContentLoaded', preloadCriticalImages);
-
-// Initialize everything when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Bergkau multi-page website initialized successfully');
-    
-    // Add a subtle loading animation completion
-    document.body.classList.add('loaded');
-});
 
 // Global functions for modal (needed for onclick attributes)
 window.openImageModal = openImageModal;
