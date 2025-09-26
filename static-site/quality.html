@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Качество - Bergkau</title>
+    <meta name="description" content="Система контроля качества Bergkau - бескомпромиссное качество пневмоподвески">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+<body>
+    <!-- Language Selector Modal -->
+    <div id="languageModal" class="language-modal hidden">
+        <div class="language-modal-content">
+            <h3 data-translate="select-language">Выберите язык</h3>
+            <div class="language-options">
+                <button onclick="changeLanguage('ru')" class="language-btn active" data-lang="ru">
+                    <span class="flag">🇷🇺</span> Русский
+                </button>
+                <button onclick="changeLanguage('en')" class="language-btn" data-lang="en">
+                    <span class="flag">🇺🇸</span> English
+                </button>
+                <button onclick="changeLanguage('de')" class="language-btn" data-lang="de">
+                    <span class="flag">🇩🇪</span> Deutsch
+                </button>
+                <button onclick="changeLanguage('es')" class="language-btn" data-lang="es">
+                    <span class="flag">🇪🇸</span> Español
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="images/logo.jpg" alt="Bergkau Logo" class="logo">
+                    <span class="brand-name">BERGKAU</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav-home">Главная</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav-about">О компании</a></li>
+                    <li><a href="products.html" class="nav-link" data-translate="nav-products">Продукция</a></li>
+                    <li><a href="quality.html" class="nav-link active" data-translate="nav-quality">Качество</a></li>
+                    <li><a href="contact.html" class="nav-link" data-translate="nav-contact">Контакты</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="language-toggle" onclick="toggleLanguageModal()">
+                        <span id="currentLang">RU</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header dark-section">
+        <div class="container">
+            <h1 class="page-title" data-translate="quality-title">Бескомпромиссное качество</h1>
+            <p class="page-subtitle" data-translate="quality-subtitle">Премиум — это наш стандарт</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Quality Process -->
+        <section class="quality-process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="quality-process-title">От сырья до готового продукта</h2>
+                    <p class="section-subtitle" data-translate="quality-process-subtitle">Строгий контроль на каждом этапе производства</p>
+                </div>
+
+                <div class="quality-process-grid">
+                    <div class="process-step-card">
+                        <div class="process-number">01</div>
+                        <div class="process-content">
+                            <img src="images/Страница - QUALITY POLICY/Quality_01.jpg" alt="Raw Materials" class="process-image">
+                            <h3 data-translate="quality-step1-title">Входной контроль материалов</h3>
+                            <p data-translate="quality-step1-desc">Наши резиновые смеси проходят до 16 различных испытаний включая прочность на разрыв, устойчивость к озону и гибкость при низких температурах</p>
+                            <ul class="process-features">
+                                <li data-translate="quality-step1-feature1">Проверка прочности на разрыв</li>
+                                <li data-translate="quality-step1-feature2">Тестирование устойчивости к озону</li>
+                                <li data-translate="quality-step1-feature3">Испытание гибкости при низких температурах</li>
+                                <li data-translate="quality-step1-feature4">Анализ химического состава</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card">
+                        <div class="process-number">02</div>
+                        <div class="process-content">
+                            <img src="images/Страница - QUALITY POLICY/Quality_02.jpg" alt="Production" class="process-image">
+                            <h3 data-translate="quality-step2-title">Контроль производства</h3>
+                            <p data-translate="quality-step2-desc">Интегрированное производство с контролем каждого технологического этапа на одной площадке</p>
+                            <ul class="process-features">
+                                <li data-translate="quality-step2-feature1">Мониторинг технологических параметров</li>
+                                <li data-translate="quality-step2-feature2">Контроль температурного режима</li>
+                                <li data-translate="quality-step2-feature3">Проверка геометрических размеров</li>
+                                <li data-translate="quality-step2-feature4">Соблюдение технологических стандартов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card">
+                        <div class="process-number">03</div>
+                        <div class="process-content">
+                            <img src="images/Страница - QUALITY POLICY/Quality_03.jpg" alt="Testing" class="process-image">
+                            <h3 data-translate="quality-step3-title">Испытания готовой продукции</h3>
+                            <p data-translate="quality-step3-desc">Каждая пневморессора тестируется на имитацию жизненного цикла, нагрузку, расширение и давление на разрыв</p>
+                            <ul class="process-features">
+                                <li data-translate="quality-step3-feature1">Имитация жизненного цикла</li>
+                                <li data-translate="quality-step3-feature2">Тесты на максимальную нагрузку</li>
+                                <li data-translate="quality-step3-feature3">Проверка расширения</li>
+                                <li data-translate="quality-step3-feature4">Испытания давления на разрыв</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification -->
+        <section class="certification-section dark-section">
+            <div class="container">
+                <div class="certification-content">
+                    <div class="certification-text">
+                        <h2 class="section-title" data-translate="certification-title">Сертификация ISO/TS 16949:2012</h2>
+                        <p data-translate="certification-desc">Наша система менеджмента качества сертифицирована по строжайшим международным автомобильным стандартам</p>
+                        
+                        <div class="certification-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">
+                                    <h4 data-translate="benefit1-title">Международное признание</h4>
+                                    <p data-translate="benefit1-desc">Соответствие глобальным стандартам качества</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">
+                                    <h4 data-translate="benefit2-title">Непрерывное улучшение</h4>
+                                    <p data-translate="benefit2-desc">Постоянный мониторинг и совершенствование процессов</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">
+                                    <h4 data-translate="benefit3-title">Предотвращение дефектов</h4>
+                                    <p data-translate="benefit3-desc">Проактивный подход к обеспечению качества</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-visual">
+                        <div class="certification-badge">
+                            <div class="badge-icon">🏆</div>
+                            <div class="badge-text">
+                                <div class="badge-title">ISO/TS 16949:2012</div>
+                                <div class="badge-subtitle" data-translate="certified-quality">Сертифицированное качество</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Statistics -->
+        <section class="quality-stats">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="quality-stats-title">Наши показатели качества</h2>
+                    <p class="section-subtitle" data-translate="quality-stats-subtitle">Цифры, подтверждающие наше превосходство</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label" data-translate="stat-tests">Типов испытаний материалов</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label" data-translate="stat-success">Процент прохождения ОТК</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">0.02%</div>
+                        <div class="stat-label" data-translate="stat-defects">Уровень брака</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label" data-translate="stat-monitoring">Мониторинг качества</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.jpg" alt="Bergkau Logo" class="footer-logo">
+                    <span class="footer-brand-name">BERGKAU</span>
+                    <p class="footer-description" data-translate="footer-desc">Премиальная пневмоподвеска для непревзойденного комфорта и долговечности</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-translate="footer-products-title">Продукция</h4>
+                        <ul>
+                            <li><a href="products.html" data-translate="footer-trucks">Грузовики</a></li>
+                            <li><a href="products.html" data-translate="footer-trailers">Прицепы</a></li>
+                            <li><a href="products.html" data-translate="footer-buses">Автобусы</a></li>
+                            <li><a href="products.html" data-translate="footer-cabins">Кабины</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 data-translate="footer-company-title">Компания</h4>
+                        <ul>
+                            <li><a href="about.html" data-translate="footer-about">О нас</a></li>
+                            <li><a href="quality.html" data-translate="footer-quality">Качество</a></li>
+                            <li><a href="contact.html" data-translate="footer-contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bergkau. <span data-translate="footer-rights">Все права защищены.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

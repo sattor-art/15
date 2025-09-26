@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Bergkau</title>
+    <meta name="description" content="Свяжитесь с Bergkau - форма обратной связи и контактная информация">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+<body>
+    <!-- Language Selector Modal -->
+    <div id="languageModal" class="language-modal hidden">
+        <div class="language-modal-content">
+            <h3 data-translate="select-language">Выберите язык</h3>
+            <div class="language-options">
+                <button onclick="changeLanguage('ru')" class="language-btn active" data-lang="ru">
+                    <span class="flag">🇷🇺</span> Русский
+                </button>
+                <button onclick="changeLanguage('en')" class="language-btn" data-lang="en">
+                    <span class="flag">🇺🇸</span> English
+                </button>
+                <button onclick="changeLanguage('de')" class="language-btn" data-lang="de">
+                    <span class="flag">🇩🇪</span> Deutsch
+                </button>
+                <button onclick="changeLanguage('es')" class="language-btn" data-lang="es">
+                    <span class="flag">🇪🇸</span> Español
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="images/logo.jpg" alt="Bergkau Logo" class="logo">
+                    <span class="brand-name">BERGKAU</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav-home">Главная</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav-about">О компании</a></li>
+                    <li><a href="products.html" class="nav-link" data-translate="nav-products">Продукция</a></li>
+                    <li><a href="quality.html" class="nav-link" data-translate="nav-quality">Качество</a></li>
+                    <li><a href="contact.html" class="nav-link active" data-translate="nav-contact">Контакты</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="language-toggle" onclick="toggleLanguageModal()">
+                        <span id="currentLang">RU</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header dark-section">
+        <div class="container">
+            <h1 class="page-title" data-translate="contact-title">Готовы найти идеальное решение?</h1>
+            <p class="page-subtitle" data-translate="contact-subtitle">Наши специалисты готовы помочь</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <div class="form-header">
+                            <h2 data-translate="form-title">Свяжитесь с нами</h2>
+                            <p data-translate="form-description">Заполните форму ниже, и мы свяжемся с вами в течение 24 часов</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" data-translate="form-name">Имя *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company" data-translate="form-company">Компания</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" data-translate="form-email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" data-translate="form-phone">Телефон</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" data-translate="form-subject">Тема обращения</label>
+                                <select id="subject" name="subject">
+                                    <option value="" data-translate="form-subject-select">Выберите тему</option>
+                                    <option value="products" data-translate="form-subject-products">Вопросы о продукции</option>
+                                    <option value="pricing" data-translate="form-subject-pricing">Запрос цены</option>
+                                    <option value="technical" data-translate="form-subject-technical">Техническая поддержка</option>
+                                    <option value="partnership" data-translate="form-subject-partnership">Партнерство</option>
+                                    <option value="other" data-translate="form-subject-other">Другое</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" data-translate="form-message">Сообщение *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Расскажите подробнее о ваших потребностях..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary btn-full-width" data-translate="form-submit">Отправить заявку</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <h4 data-translate="contact-response-time">Время ответа</h4>
+                            <p data-translate="contact-response-desc">Мы свяжемся с вами в течение 24 часов</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📋</div>
+                            <h4 data-translate="contact-info-provided">Что мы предоставим</h4>
+                            <ul>
+                                <li data-translate="contact-pricing">Подробную информацию о ценах</li>
+                                <li data-translate="contact-availability">Наличие товара</li>
+                                <li data-translate="contact-specs">Технические характеристики</li>
+                                <li data-translate="contact-consultation">Техническую консультацию</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🎯</div>
+                            <h4 data-translate="contact-expertise">Наша экспертиза</h4>
+                            <ul>
+                                <li data-translate="expertise1">Подбор оптимального решения</li>
+                                <li data-translate="expertise2">Техническая совместимость</li>
+                                <li data-translate="expertise3">Условия поставки</li>
+                                <li data-translate="expertise4">Послепродажная поддержка</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us dark-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="why-choose-title">Почему выбирают нас</h2>
+                    <p class="section-subtitle" data-translate="why-choose-subtitle">Преимущества работы с Bergkau</p>
+                </div>
+
+                <div class="reasons-grid">
+                    <div class="reason-item">
+                        <div class="reason-icon">🚀</div>
+                        <h4 data-translate="reason1-title">Быстрый отклик</h4>
+                        <p data-translate="reason1-desc">Ответ на ваш запрос в течение 24 часов</p>
+                    </div>
+                    
+                    <div class="reason-item">
+                        <div class="reason-icon">🔧</div>
+                        <h4 data-translate="reason2-title">Техническая экспертиза</h4>
+                        <p data-translate="reason2-desc">Профессиональная помощь в выборе решения</p>
+                    </div>
+                    
+                    <div class="reason-item">
+                        <div class="reason-icon">📦</div>
+                        <h4 data-translate="reason3-title">Широкий ассортимент</h4>
+                        <p data-translate="reason3-desc">Более 550 наименований в наличии</p>
+                    </div>
+                    
+                    <div class="reason-item">
+                        <div class="reason-icon">🏆</div>
+                        <h4 data-translate="reason4-title">Гарантия качества</h4>
+                        <p data-translate="reason4-desc">Сертифицированная система менеджмента качества</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.jpg" alt="Bergkau Logo" class="footer-logo">
+                    <span class="footer-brand-name">BERGKAU</span>
+                    <p class="footer-description" data-translate="footer-desc">Премиальная пневмоподвеска для непревзойденного комфорта и долговечности</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-translate="footer-products-title">Продукция</h4>
+                        <ul>
+                            <li><a href="products.html" data-translate="footer-trucks">Грузовики</a></li>
+                            <li><a href="products.html" data-translate="footer-trailers">Прицепы</a></li>
+                            <li><a href="products.html" data-translate="footer-buses">Автобусы</a></li>
+                            <li><a href="products.html" data-translate="footer-cabins">Кабины</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 data-translate="footer-company-title">Компания</h4>
+                        <ul>
+                            <li><a href="about.html" data-translate="footer-about">О нас</a></li>
+                            <li><a href="quality.html" data-translate="footer-quality">Качество</a></li>
+                            <li><a href="contact.html" data-translate="footer-contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bergkau. <span data-translate="footer-rights">Все права защищены.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
