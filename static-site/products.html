@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукция - Bergkau</title>
+    <meta name="description" content="Каталог пневморессор Bergkau для грузовиков, прицепов, автобусов и кабин">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+<body>
+    <!-- Language Selector Modal -->
+    <div id="languageModal" class="language-modal hidden">
+        <div class="language-modal-content">
+            <h3 data-translate="select-language">Выберите язык</h3>
+            <div class="language-options">
+                <button onclick="changeLanguage('ru')" class="language-btn active" data-lang="ru">
+                    <span class="flag">🇷🇺</span> Русский
+                </button>
+                <button onclick="changeLanguage('en')" class="language-btn" data-lang="en">
+                    <span class="flag">🇺🇸</span> English
+                </button>
+                <button onclick="changeLanguage('de')" class="language-btn" data-lang="de">
+                    <span class="flag">🇩🇪</span> Deutsch
+                </button>
+                <button onclick="changeLanguage('es')" class="language-btn" data-lang="es">
+                    <span class="flag">🇪🇸</span> Español
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="images/logo.jpg" alt="Bergkau Logo" class="logo">
+                    <span class="brand-name">BERGKAU</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav-home">Главная</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav-about">О компании</a></li>
+                    <li><a href="products.html" class="nav-link active" data-translate="nav-products">Продукция</a></li>
+                    <li><a href="quality.html" class="nav-link" data-translate="nav-quality">Качество</a></li>
+                    <li><a href="contact.html" class="nav-link" data-translate="nav-contact">Контакты</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="language-toggle" onclick="toggleLanguageModal()">
+                        <span id="currentLang">RU</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header dark-section">
+        <div class="container">
+            <h1 class="page-title" data-translate="products-title">Точные решения для любых задач</h1>
+            <p class="page-subtitle" data-translate="products-subtitle">Обширный каталог решений для пневмоподвески</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Product Categories -->
+        <section class="products-categories">
+            <div class="container">
+                <div class="products-grid-info">
+                    <div class="product-info-card">
+                        <div class="product-info-header">
+                            <img src="images/Страница - PRODUCTS/trucks.png" alt="Trucks" class="product-info-icon">
+                            <h3 data-translate="trucks-title">Грузовики</h3>
+                        </div>
+                        <div class="product-info-content">
+                            <p class="product-count" data-translate="trucks-count">220+ наименований</p>
+                            <p class="product-description" data-translate="trucks-desc">Обеспечьте безопасность и сохранность груза благодаря нашим долговечным пневморессорам, рассчитанным на тяжелые условия эксплуатации и увеличение срока службы vehicle.</p>
+                            <ul class="product-features">
+                                <li data-translate="trucks-feature1">Высокая грузоподъемность</li>
+                                <li data-translate="trucks-feature2">Долговечность в тяжелых условиях</li>
+                                <li data-translate="trucks-feature3">Совместимость с европейскими и американскими моделями</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="product-info-card">
+                        <div class="product-info-header">
+                            <img src="images/Страница - PRODUCTS/trailers.png" alt="Trailers" class="product-info-icon">
+                            <h3 data-translate="trailers-title">Прицепы</h3>
+                        </div>
+                        <div class="product-info-content">
+                            <p class="product-count" data-translate="trailers-count">200+ наименований</p>
+                            <p class="product-description" data-translate="trailers-desc">Поддерживайте оптимальную высоту дорожного просвета и защищайте свой груз с помощью надежных решений для подвески всех типов прицепов.</p>
+                            <ul class="product-features">
+                                <li data-translate="trailers-feature1">Стабилизация дорожного просвета</li>
+                                <li data-translate="trailers-feature2">Защита груза от повреждений</li>
+                                <li data-translate="trailers-feature3">Универсальность для всех типов прицепов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="product-info-card">
+                        <div class="product-info-header">
+                            <img src="images/Страница - PRODUCTS/bus.png" alt="Buses" class="product-info-icon">
+                            <h3 data-translate="buses-title">Автобусы</h3>
+                        </div>
+                        <div class="product-info-content">
+                            <p class="product-count" data-translate="buses-count">75+ наименований</p>
+                            <p class="product-description" data-translate="buses-desc">Обеспечьте пассажирам плавную и комфортную поездку, одновременно повышая управляемость и безопасность vehicle.</p>
+                            <ul class="product-features">
+                                <li data-translate="buses-feature1">Максимальный комфорт пассажиров</li>
+                                <li data-translate="buses-feature2">Улучшенная управляемость</li>
+                                <li data-translate="buses-feature3">Снижение вибраций и шума</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="product-info-card">
+                        <div class="product-info-header">
+                            <img src="images/Страница - PRODUCTS/cabin.png" alt="Cabins" class="product-info-icon">
+                            <h3 data-translate="cabins-title">Кабины</h3>
+                        </div>
+                        <div class="product-info-content">
+                            <p class="product-count" data-translate="cabins-count">70+ наименований</p>
+                            <p class="product-description" data-translate="cabins-desc">Значительно повысьте комфорт водителя, изолируя кабину от вибраций и шума дороги.</p>
+                            <ul class="product-features">
+                                <li data-translate="cabins-feature1">Изоляция от дорожных вибраций</li>
+                                <li data-translate="cabins-feature2">Снижение усталости водителя</li>
+                                <li data-translate="cabins-feature3">Повышение безопасности вождения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications -->
+        <section class="tech-specs-section dark-section">
+            <div class="container">
+                <div class="tech-specs-header">
+                    <h2 class="section-title" data-translate="specs-title">Техническая схема пневморессоры</h2>
+                    <p class="section-subtitle" data-translate="specs-subtitle">Детальная схема компонентов и их назначение</p>
+                </div>
+                
+                <div class="tech-specs-content">
+                    <div class="specs-image-container">
+                        <img src="images/Страница - PRODUCTS/Products_005.jpg" alt="Air Spring Technical Diagram" class="specs-image-fullscreen" onclick="openImageModal(this.src)">
+                        <div class="specs-image-overlay">
+                            <span class="specs-image-text" data-translate="click-to-enlarge">Нажмите для увеличения</span>
+                        </div>
+                    </div>
+                    
+                    <div class="specs-table-container">
+                        <table class="specs-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th data-translate="table-header-de">Deutsch</th>
+                                    <th data-translate="table-header-en">English</th>
+                                    <th data-translate="table-header-es">Español</th>
+                                    <th data-translate="table-header-ru">Русский</th>
+                                </tr>
+                            </thead>
+                            <tbody id="specsTableBody">
+                                <!-- Table content will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal hidden">
+        <div class="image-modal-content">
+            <button class="image-modal-close" onclick="closeImageModal()">&times;</button>
+            <img id="modalImage" src="" alt="Technical Diagram">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.jpg" alt="Bergkau Logo" class="footer-logo">
+                    <span class="footer-brand-name">BERGKAU</span>
+                    <p class="footer-description" data-translate="footer-desc">Премиальная пневмоподвеска для непревзойденного комфорта и долговечности</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-translate="footer-products-title">Продукция</h4>
+                        <ul>
+                            <li><a href="products.html" data-translate="footer-trucks">Грузовики</a></li>
+                            <li><a href="products.html" data-translate="footer-trailers">Прицепы</a></li>
+                            <li><a href="products.html" data-translate="footer-buses">Автобусы</a></li>
+                            <li><a href="products.html" data-translate="footer-cabins">Кабины</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 data-translate="footer-company-title">Компания</h4>
+                        <ul>
+                            <li><a href="about.html" data-translate="footer-about">О нас</a></li>
+                            <li><a href="quality.html" data-translate="footer-quality">Качество</a></li>
+                            <li><a href="contact.html" data-translate="footer-contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bergkau. <span data-translate="footer-rights">Все права защищены.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
