@@ -468,7 +468,7 @@ const technicalSpecsData = [
 ];
 
 // Current language
-let currentLanguage = localStorage.getItem('bergkau-language') || 'ru';
+let currentLanguage = localStorage.getItem('bergkau-language') || 'de';
 
 // Language initialization
 function initializeLanguage() {
