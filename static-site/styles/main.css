@@ -344,6 +344,37 @@ body {
     justify-content: center;
 }
 
+/* Hero with Background Image */
+.hero-with-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../images/Страница - MAIN/main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(45, 45, 45, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-with-bg .hero-content,
+.hero-with-bg .stats-section {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-with-bg .hero-title,
+.hero-with-bg .hero-subtitle {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
