@@ -485,6 +485,59 @@ function initializeAnimations() {
                 grid-template-columns: 1fr;
             }
         }
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 2rem;
+    background: var(--accent-yellow);
+    color: var(--primary-black);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.advantage-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.mv-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.reason-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.badge-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.process-number {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-yellow);
+    color: var(--primary-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin: 0 auto var(--spacing-md);
+}
     `;
     document.head.appendChild(style);
 }
