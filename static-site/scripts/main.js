@@ -141,7 +141,7 @@ function initializeScrollEffects() {
     const elementsToAnimate = document.querySelectorAll(
         '.hero-content, .section-header, .overview-content, .mission-vision-grid, ' +
         '.products-grid-info, .tech-specs-content, .quality-process-grid, .contact-content, ' +
-        '.stats-section, .advantages-grid, .certification-content, '.stats-grid, ' +
+        '.stats-section, .advantages-grid, .certification-content, .stats-grid, ' +
         '.product-preview-card, .process-step-card, .story-content'
     );
     
