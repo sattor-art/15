@@ -1377,6 +1377,10 @@ section {
     color: var(--white);
 }
 
+.dark-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .process-step h3 {
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
