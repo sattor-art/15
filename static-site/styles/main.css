@@ -1367,10 +1367,14 @@ section {
 
 .process-image {
     width: 100%;
-    height: 200px;
+    height: 350px;
     object-fit: cover;
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-md);
+}
+
+.dark-section .section-title {
+    color: var(--white);
 }
 
 .process-step h3 {
