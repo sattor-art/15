@@ -1039,30 +1039,46 @@ section {
 }
 
 .tech-specs-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xxl);
-    align-items: start;
+    display: block;
+}
+
+.tech-specs-header h2 {
+    color: var(--white);
 }
 
 .specs-image-container {
+    width: 100vw;
     position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: var(--spacing-xl);
     cursor: pointer;
-    border-radius: var(--radius-lg);
+    border-radius: 0;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
 }
 
 .specs-image-container:hover {
-    transform: scale(1.02);
+    transform: none;
 }
 
 .specs-image-fullscreen {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     display: block;
+}
+
+.specs-table-container {
+    background: var(--white);
     border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .specs-image-overlay {
