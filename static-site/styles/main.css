@@ -952,7 +952,7 @@ section {
 
 .products-grid-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
 }
 
