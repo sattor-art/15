@@ -116,9 +116,9 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--text-primary);
-    border: 2px solid var(--medium-gray);
+    background: var(--accent-yellow);
+    color: var(--primary-black);
+    border: 2px solid var(--accent-yellow);
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: var(--radius-lg);
     font-weight: 500;
@@ -130,8 +130,9 @@ body {
 }
 
 .btn-secondary:hover {
-    border-color: var(--accent-yellow);
-    color: var(--accent-yellow);
+    background: var(--dark-yellow);
+    border-color: var(--dark-yellow);
+    color: var(--primary-black);
     transform: translateY(-1px);
 }
 
