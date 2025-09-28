@@ -683,6 +683,7 @@ function initializeLanguage() {
 // Update language button display
 function updateLanguageButton() {
     const currentLangElement = document.getElementById('currentLang');
+    const flagElement = document.querySelector('.language-toggle .flag');
     if (currentLangElement) {
         const langMap = {
             'ru': 'RU',
@@ -690,7 +691,16 @@ function updateLanguageButton() {
             'de': 'DE',
             'es': 'ES'
         };
+        const flagMap = {
+            'ru': '🇷🇺',
+            'en': '🇺🇸',
+            'de': '🇩🇪',
+            'es': '🇪🇸'
+        };
         currentLangElement.textContent = langMap[currentLanguage] || 'DE';
+        if (flagElement) {
+            flagElement.textContent = flagMap[currentLanguage] || '🇩🇪';
+        }
     }
     
     // Update active language button in modal
