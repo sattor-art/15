@@ -195,7 +195,10 @@ const translations = {
         "feature3-title": "Глобальное присутствие",
         "feature3-desc": "Поставки в Европу и Америку",
         "products-preview-title": "Наша продукция",
-        "products-preview-subtitle": "Решения для любых задач коммерческого транспорта"
+        "products-preview-subtitle": "Решения для любых задач коммерческого транспорта",
+        
+        // Footer
+        "contact-us-btn": "Написать нам"
     },
     
     en: {
