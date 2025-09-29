@@ -431,19 +431,19 @@ body {
     transform: scale(1.02);
 }
 
-/* Stats Section - Transparent and Positioned */
+/* Stats Section - Transparent and Positioned Left */
 .stats-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
     max-width: 600px;
-    margin-left: auto;
-    margin-right: var(--spacing-xl);
+    margin-left: var(--spacing-xl);
+    margin-right: auto;
     padding: 0 var(--spacing-sm);
     position: absolute;
     bottom: var(--spacing-xl);
-    right: var(--spacing-xl);
+    left: var(--spacing-xl);
     z-index: 3;
 }
 
