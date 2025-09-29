@@ -513,19 +513,31 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 300%;
     height: 100%;
     background-image: 
         radial-gradient(2px 2px at 20px 30px, rgba(255, 215, 0, 0.3), transparent),
         radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
         radial-gradient(1px 1px at 90px 40px, rgba(255, 215, 0, 0.4), transparent),
         radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.15), transparent),
-        radial-gradient(2px 2px at 160px 30px, rgba(255, 215, 0, 0.2), transparent);
-    background-repeat: repeat;
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 215, 0, 0.2), transparent),
+        radial-gradient(1px 1px at 60px 90px, rgba(255, 215, 0, 0.25), transparent),
+        radial-gradient(2px 2px at 180px 60px, rgba(255, 255, 255, 0.08), transparent),
+        radial-gradient(1px 1px at 220px 20px, rgba(255, 215, 0, 0.35), transparent);
+    background-repeat: repeat-x;
     background-size: 200px 100px;
-    animation: particleFloat 20s linear infinite;
+    animation: particleFloatContinuous 25s linear infinite;
     pointer-events: none;
     z-index: 1;
+}
+
+@keyframes particleFloatContinuous {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(-66.666%);
+    }
 }
 
 .dark-section > * {
