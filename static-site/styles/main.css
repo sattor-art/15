@@ -713,27 +713,6 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
-.btn-secondary {
-    background: var(--accent-yellow);
-    color: var(--primary-black);
-    border: 2px solid var(--accent-yellow);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    font-weight: 500;
-    font-size: var(--font-size-base);
-    cursor: pointer;
-    transition: var(--transition);
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-secondary:hover {
-    background: var(--dark-yellow);
-    border-color: var(--dark-yellow);
-    color: var(--primary-black);
-    transform: translateY(-1px);
-}
-
 /* Page Header */
 .page-header {
     padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
