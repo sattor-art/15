@@ -2029,7 +2029,7 @@ section {
 }
 
 .footer-logo {
-    width: 50px;
+    width: 65px;
     height: 50px;
     border-radius: var(--radius-sm);
     object-fit: cover;
