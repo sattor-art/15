@@ -2024,7 +2024,7 @@ section {
 
 .footer-brand {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: var(--spacing-md);
 }
 
